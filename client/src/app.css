@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: Roboto, sans-serif;
+}
+
+.app {
+    background: #303030;
+    background-size: cover;
+    height: 100vh;
+}
+
+.wrapper {
+    position: absolute;
+    top: 25%;
+    transform: translateY(-25%);
+    width: 100%;
+    padding: 0 20px;
+}
+
+h1 {
+    padding: 20px;
+}
+
+.form {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #16e0bd;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.13);
+}
+
+.comments {
+    max-width: 700px;
+    max-height: 300px;
+    margin: 30px auto;
+    background: #16e0bd;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.13);
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.comments li {
+    list-style: none;
+}
+
+.header {
+    max-width: 700px;
+    max-height: 300px;
+    margin: 30px auto;
+    background: #16e0bd;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.13);
+}
+
+.comment {
+    padding: 20px;
+    color: white;
+}
+
+.input-fields {
+    display: flex;
+    flex-direction: column;
+    margin-right: 4%;
+}
+
+.input-fields,
+.msg {
+    width: 48%;
+}
+
+.input-fields .input,
+.msg textarea {
+    margin: 10px 0;
+    background: transparent;
+    border: 1px dashed black;
+    border-radius: 10px;
+    border-bottom: 2px solid black;
+    padding: 10px;
+    color: black;
+    width: 100%;
+}
+
+
+.edit {
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 20px;
+}
+
+.delete {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.view {
+    display: inline-block;
+}
+
+.msg textarea {
+    height: 200px;
+}
+
+::-webkit-input-placeholder {
+    color: white;
+}
+
+::-moz-placeholder {
+    color: white;
+}
+
+::-ms-input-placeholder {
+    color: white;
+}
+
+
+.btn {
+    background: #0040ff;
+    text-align: center;
+    padding: 1px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    background-color: black;
+}
+
+@media screen and (max-width: 600px) {
+    .form {
+        flex-direction: column;
+    }
+    .msg textarea {
+        height: 80px;
+    }
+    .input-fields,
+    .msg {
+        width: 100%;
+    }
+}
