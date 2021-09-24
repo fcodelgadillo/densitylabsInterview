@@ -24,11 +24,17 @@ const App = () => {
 
 
     function addComment ()  {
-        axios.post('/api/v1/comment/new', {
-            name: name,
-            email: email,
-            comment: comment
-        })
+        const nameField = document.getElementById("name");
+        const emailField = document.getElementById("email");
+        const textField = document.getElementById("text");
+
+        if (nameField.value && emailField.value && textField.value) {
+            axios.post('/api/v1/comment/new', {
+                name: name,
+                email: email,
+                comment: comment
+            })
+        }
         setLoaded(false)
     }
 
